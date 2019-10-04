@@ -9,21 +9,33 @@
     <h:body>
         <h:form>
         <center>
-            Cuenta de cobro
+            <h1>Cuenta de cobro</h1>
         </center>
         <br></br>
-        <td>
+        <table border="1" bgcolor="#b2ffff">
+        <tr>
+            <td width="50%" align="CENTER">
             NOMBRE:
+            </td>
+        <td width="50%" align="CENTER">
             <h:inputText id = "inputNombre" value ="#{profesional.nombre}"/>
         </td>
+        </tr>
         <br></br>
-        <td>
+        <tr>
+        <td width="50%" align="CENTER">
             APELLIDO:
+            </td>
+            <td width="50%" align="CENTER">
             <h:inputText id = "inputApellido" value ="#{profesional.apellido}"/>
         </td>
+        </tr>
         <br></br>
-        <td>
+        <tr>
+        <td width="50%" align="CENTER">
             PROFESION:
+            </td>
+            <td width="50%" align="CENTER">
             <h:selectOneMenu value ="#{profesional.profesion}">
                 <f:selectItem itemValue="Ingeniero" itemLabel="Ingeniero"/>
                 <f:selectItem itemValue="Tecnologo" itemLabel="Tecnologo"/>
@@ -31,42 +43,61 @@
                 <f:selectItem itemValue="Auxiliar" itemLabel="Auxiliar"/>
             </h:selectOneMenu>
         </td>
+        </tr>
         <br></br>
-        <td>
+        <tr>
+        <td width="50%" align="CENTER">
             GENERO:
+            </td>
+            <td width="50%" align="CENTER">
             <h:selectOneRadio value ="#{profesional.genero}">
                 <f:selectItem itemValue="F" itemLabel="Mujer"/>
                 <f:selectItem itemValue="M" itemLabel="Hombre"/>
                 <f:selectItem itemValue="O" itemLabel="Otro"/>
             </h:selectOneRadio>
         </td> 
+        </tr>
         <br></br>
-        <td>
+        <tr>
+        <td width="50%" align="CENTER">
             IDIOMAS:
+            </td>
+            <td width="50%" align="CENTER">
             <h:selectManyCheckbox value ="#{profesional.idiomas}">
                 <f:selectItem itemValue="Ingles" itemLabel="Ingles"/>
                 <f:selectItem itemValue="Frances" itemLabel="Frances"/>
                 <f:selectItem itemValue="Aleman" itemLabel="Aleman"/>
             </h:selectManyCheckbox>
         </td>
+        </tr>
         <br></br>
-        <td>
+        <tr>
+        <td width="50%" align="CENTER">
             UBICACION:
+        </td>
+            <td width="50%" align="CENTER">
             <h:selectOneRadio value ="#{profesional.ubicacion}">
                 <f:selectItem itemValue="Facatativa" itemLabel="Facatativa"/>
                 <f:selectItem itemValue="Afueras" itemLabel="Afueras"/>
             </h:selectOneRadio>
         </td>
+        </tr>
         <br></br>
-        <td>
+        <tr>
+        <td width="50%" align="CENTER">
             DIAS TRABAJADOS:
+            </td>
+        <td width="50%" align="CENTER">
             <h:inputText id = "inputDias" value ="#{profesional.diasTrabajados}"/>
         </td>
+        </tr>
+        </table>
         <br></br>
         <br></br>
         <h:commandButton id ="Generar" value ="Generar" actionListener ="#{cuenta.hacerCuenta()}" action="cobro">
            
         </h:commandButton>
+        
         </h:form>
     </h:body>
 </html>

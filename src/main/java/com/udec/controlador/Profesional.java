@@ -10,8 +10,9 @@ import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
 /**
- *
- * @author dalej
+ *Clase que maneja los controladores de la pagina "index"
+ * y atrapa los datos del profesional
+ * @author Duvan Poveda
  */
 @Named
 @SessionScoped

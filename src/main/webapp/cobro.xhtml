@@ -8,36 +8,38 @@
     <h:body>
         <h:form>
         <center>
-            Resultado
+            <h1>Resultado</h1> 
         </center>
         <br></br>
         <td>
-            <h:outputText id="outGenero" value="#{cuenta.generoFormal}:     "/>
-            <h:outputText id="outNombre" value="#{cuenta.profesional.nombre}"/>
+            <h:outputText id="outGenero" style="color:blue;font-size:30px" value="#{cuenta.generoFormal}:     "/>
+            <h:outputText id="outNombre" style="color:blue;font-size:30px" value="#{cuenta.profesional.nombre}"/>
         </td>
         <br></br>
         <td>
-            <h:outputText id="outProf1" value="Por su profesion :   "/>
-            <h:outputText id="outProf2" value="#{cuenta.profesional.profesion}"/>
+            <h:outputText id="outProf1" style="color:blue;font-size:30px" value="Por su profesion :   "/>
+            <h:outputText id="outProf2" style="color:blue;font-size:30px" value="#{cuenta.profesional.profesion}"/>
         </td>
         <br></br>
         <td>
-            <h:outputText id="outIdiom2" value="#{cuenta.idiomas}"/>
+            <h:outputText id="outIdiom2" style="color:blue;font-size:30px" value="#{cuenta.idiomas}"/>
         </td>
          <br></br>
         <td>
-            <h:outputText id="outUbic1" value="Por su ubicacion :   "/>
-            <h:outputText id="outUbic2" value="#{cuenta.profesional.ubicacion}"/>
+            <h:outputText id="outUbic1" style="color:blue;font-size:30px" value="Por su ubicacion :   "/>
+            <h:outputText id="outUbic2" style="color:blue;font-size:30px" value="#{cuenta.profesional.ubicacion}"/>
         </td>
           <br></br>
         <td>
-            <h:outputText id="outdias1" value="Y por sus dias trabajados :   "/>
-            <h:outputText id="outdias2" value="#{cuenta.profesional.diasTrabajados}"/>
+            <h:outputText id="outdias1" style="color:blue;font-size:30px" value="Y por sus dias trabajados :   "/>
+            <h:outputText id="outdias2" style="color:blue;font-size:30px" value="#{cuenta.profesional.diasTrabajados}"/>
         </td>
             <br></br>
         <td>
-            <h:outputText id="outCuenta" value="Su cuenta es por :   "/>
-            <h:outputText id="outCuenta2" value="#{cuenta.sueldo} COP"/>
+            <center>
+            <h:outputText id="outCuenta" style="color:red;font-size:30px" value="Su cuenta es por :   "/>
+            <h:outputText id="outCuenta2" style="color:red;font-size:30px" value="#{cuenta.sueldo} COP"/>
+            </center>
         </td>
         </h:form>
     </h:body>

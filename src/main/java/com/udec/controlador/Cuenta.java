@@ -12,12 +12,15 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 /**
- *
- * @author dalej
+ *Clase que maneja los controladores de la vista "cobro"
+ * @author Duvan Poveda
  */
 @Named
 @SessionScoped
 public class Cuenta implements Serializable {
+    /**
+    *injeccion del objeto profesional
+    */
     @Inject
     private Profesional profesional;
     
@@ -25,7 +28,16 @@ public class Cuenta implements Serializable {
     private long sueldo;
     private String generoFormal;
     private String idiomas;
-
+    /**
+    *metodo que llama la logica del aplicativo
+    */
+    public void hacerCuenta(){
+        CalcularCuenta calcular = new CalcularCuenta(profesional);
+        sueldo = calcular.calcularTotal();
+        generoFormal = calcular.saberGene();
+        idiomas = calcular.saberIdiomas();
+    } 
+    
     public String getIdiomas() {
         return idiomas;
     }
@@ -42,14 +54,6 @@ public class Cuenta implements Serializable {
         this.generoFormal = generoFormal;
     }
 
-  
-    public void hacerCuenta(){
-        CalcularCuenta calcular = new CalcularCuenta(profesional);
-        sueldo = calcular.calcularTotal();
-        generoFormal = calcular.saberGene();
-        idiomas = calcular.saberIdiomas();
-    } 
-    
     public long getSueldo() {
         return sueldo;
     }

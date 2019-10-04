@@ -8,16 +8,24 @@ package com.udec.modelo;
 import com.udec.controlador.Profesional;
 
 /**
- *
- * @author dalej
+ *Metodo que maneja la logica del aplicativo y calcula el sueldo del trabajador
+ * @author Duvan Poveda
  */
 public class CalcularCuenta {
     private Profesional profesional;
 
+    /**
+    *Constructor que recibe el objeto profesional
+    * @param profesional
+    */
     public CalcularCuenta(Profesional profesional) {
         this.profesional = profesional;
     }
     
+    /**
+    *metodo que se encarga de retornar la formalizacion del genero de el/la trabajador/a
+    * @return resultado
+    */
     public String saberGene(){
         String resultado = "";
         if(profesional.getGenero() == 'M'){
@@ -29,6 +37,11 @@ public class CalcularCuenta {
         }
         return resultado;
     }
+    
+    /**
+    *metodo que devuelve un string con los idiomas que maneja el trabajador
+    * @return idiomasString
+    */
     public String saberIdiomas(){
         String idiomasString;
         if(!(profesional.getIdiomas().isEmpty())){
@@ -37,6 +50,11 @@ public class CalcularCuenta {
             idiomasString = "";
         return idiomasString;
     }
+    
+    /**
+    *metodo que calcula el sueldo que se debe pagar al trabajador mas las bonificaciones
+    * @return total
+    */
     public long calcularTotal(){
         long total = 0;
         long sueldo =0;
