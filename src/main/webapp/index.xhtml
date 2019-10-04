@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Cuenta de cobro</title>
+    </h:head>
+    <h:body>
+        <h:form>
+        <center>
+            Cuenta de cobro
+        </center>
+        <br></br>
+        <td>
+            NOMBRE:
+            <h:inputText id = "inputNombre" value ="#{profesional.nombre}"/>
+        </td>
+        <br></br>
+        <td>
+            APELLIDO:
+            <h:inputText id = "inputApellido" value ="#{profesional.apellido}"/>
+        </td>
+        <br></br>
+        <td>
+            PROFESION:
+            <h:selectOneMenu value ="#{profesional.profesion}">
+                <f:selectItem itemValue="Ingeniero" itemLabel="Ingeniero"/>
+                <f:selectItem itemValue="Tecnologo" itemLabel="Tecnologo"/>
+                <f:selectItem itemValue="Tecnico" itemLabel="Tecnico"/>
+                <f:selectItem itemValue="Auxiliar" itemLabel="Auxiliar"/>
+            </h:selectOneMenu>
+        </td>
+        <br></br>
+        <td>
+            GENERO:
+            <h:selectOneRadio value ="#{profesional.genero}">
+                <f:selectItem itemValue="F" itemLabel="Mujer"/>
+                <f:selectItem itemValue="M" itemLabel="Hombre"/>
+                <f:selectItem itemValue="O" itemLabel="Otro"/>
+            </h:selectOneRadio>
+        </td> 
+        <br></br>
+        <td>
+            IDIOMAS:
+            <h:selectManyCheckbox value ="#{profesional.idiomas}">
+                <f:selectItem itemValue="Ingles" itemLabel="Ingles"/>
+                <f:selectItem itemValue="Frances" itemLabel="Frances"/>
+                <f:selectItem itemValue="Aleman" itemLabel="Aleman"/>
+            </h:selectManyCheckbox>
+        </td>
+        <br></br>
+        <td>
+            UBICACION:
+            <h:selectOneRadio value ="#{profesional.ubicacion}">
+                <f:selectItem itemValue="Facatativa" itemLabel="Facatativa"/>
+                <f:selectItem itemValue="Afueras" itemLabel="Afueras"/>
+            </h:selectOneRadio>
+        </td>
+        <br></br>
+        <td>
+            DIAS TRABAJADOS:
+            <h:inputText id = "inputDias" value ="#{profesional.diasTrabajados}"/>
+        </td>
+        <br></br>
+        <br></br>
+        <h:commandButton id ="Generar" value ="Generar" actionListener ="#{cuenta.hacerCuenta()}" action="cobro">
+           
+        </h:commandButton>
+        </h:form>
+    </h:body>
+</html>
+

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+        <center>
+            Resultado
+        </center>
+        <br></br>
+        <td>
+            <h:outputText id="outGenero" value="#{cuenta.generoFormal}:     "/>
+            <h:outputText id="outNombre" value="#{cuenta.profesional.nombre}"/>
+        </td>
+        <br></br>
+        <td>
+            <h:outputText id="outProf1" value="Por su profesion :   "/>
+            <h:outputText id="outProf2" value="#{cuenta.profesional.profesion}"/>
+        </td>
+        <br></br>
+        <td>
+            <h:outputText id="outIdiom2" value="#{cuenta.idiomas}"/>
+        </td>
+         <br></br>
+        <td>
+            <h:outputText id="outUbic1" value="Por su ubicacion :   "/>
+            <h:outputText id="outUbic2" value="#{cuenta.profesional.ubicacion}"/>
+        </td>
+          <br></br>
+        <td>
+            <h:outputText id="outdias1" value="Y por sus dias trabajados :   "/>
+            <h:outputText id="outdias2" value="#{cuenta.profesional.diasTrabajados}"/>
+        </td>
+            <br></br>
+        <td>
+            <h:outputText id="outCuenta" value="Su cuenta es por :   "/>
+            <h:outputText id="outCuenta2" value="#{cuenta.sueldo} COP"/>
+        </td>
+        </h:form>
+    </h:body>
+</html>
+
