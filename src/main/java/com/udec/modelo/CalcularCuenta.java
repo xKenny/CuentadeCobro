@@ -88,6 +88,9 @@ public class CalcularCuenta {
         }
         sueldo = sueldo*(profesional.getDiasTrabajados());
         total = total + sueldo;
+        if(profesional.getDiasTrabajados() <=0){
+            total = 0;
+        }
         return total;
     }
 }
